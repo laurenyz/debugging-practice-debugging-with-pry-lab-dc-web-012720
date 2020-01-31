@@ -12,11 +12,17 @@ def crew
 end
 
 def greet_crew (crew)
-  crew.each {|crew_member| "Hello #{crew_member}."}
+new = []
+  crew.each do |crew_member| 
+   new << "Hello #{crew_member}."
+  end
+  new
 end
 
 def engage
   date = generate_star_date
-  state_log(date)
+  # state_log(date) + 
   greet_crew(crew)
 end
+
+p greet_crew(crew)
